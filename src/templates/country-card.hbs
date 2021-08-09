@@ -1,51 +1,18 @@
-{{!-- <h2 class='country'>{{name}}</h2>
-<div class='form_country'>
-  <ul>
-    <p class='capital'><span class='text'>Capital: </span>{{capital}}</p>
-    <p class='population'><span class='text'>Population: </span>{{population}}</p>
-    <ul class='languages'><span class='text'>Languages:</span>{{#each languages}}
-        <li class='tag-list__item'>{{name}}</li>
-      {{/each}}
-    </ul>
-  </ul>
-  <ul><img src='{{flag}}' alt='' class='flag' /></ul>
-</div>
- --}}
-
-{{!-- <li class='menu__item'>
-  <article class='card'>
-    <div class='card__content'>
-      <h2 class='card__name'>{{name}}</h2>
-      <p class='card__price'>
-        <i class='material-icons'>Population:</i>
-        {{population}}
-      </p>
-
-      <p class='card__descr'>Capital: {{capital}}</p>
-      <ul class='tag-list'><span class='text'>Languages:</span>{{#each languages}}
-          <li class='tag-list__item'>{{name}}</li>
+{{!-- {{#each this}} --}}
+<li class='card'>
+  <h2 class='card__title'> {{name}}</h2>
+  <div class='card__thumb'>
+    <div class='card__desc'>
+      <h3>Capital: <span class='card__item-list'>{{capital}}</span></h3>
+      <h3>Population: <span class='card__item-list'>{{population}}</span></h3>
+      <h3>Languages:</h3>
+      <ul class='card__item-list'>
+        {{#each languages}}
+          <li>{{name}}</li>
         {{/each}}
       </ul>
     </div>
-    <img src='{{flag}}' alt='{{name}}' class='card__image' />
-  </article>
-</li> --}}
-
-{{! <div class='fond'> <span class='s1'>blog </span><span class='s2'>card</span></div> }}
-<div class='card'>
-  <div class='thumbnail'><img class='left' src='{{flag}}' /></div>
-  <div class='right'>
-    <h1>{{name}}</h1>
-    <div class='author'><img src='{{flag}}' />
-      <h2>{{capital}}</h2>
-    </div>
-    <div class='separator'></div>
-    <ul>
-      {{#each languages}}
-        <li class='tag-list__item'><i class='fa fa-eye fa-2x'></i>{{name}}</li>
-      {{/each}}
-    </ul>
+    <img class='card__img' src='{{flag}}' alt='{{name}}' height='250' />
   </div>
-
-  <div class='fab'><i class='fa fa-arrow-down fa-3x'> </i></div>
-</div>
+</li>
+{{!-- {{/each}} --}}
