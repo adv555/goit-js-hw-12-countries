@@ -11,6 +11,7 @@ function creatMarckup(data, template) {
 }
 // ========= renderSearchContent
 export default function renderSearchContent(data) {
+  refs.cards.innerHTML = '';
   if (data.length === 1) {
     return creatMarckup(data, countryCardTpl);
   } else if (data.length > 2 && data.length < 10) {
